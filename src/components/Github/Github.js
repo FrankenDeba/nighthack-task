@@ -6,10 +6,13 @@ function Github() {
     const [ repos, setRepos ] = useState([])
     const { state, dispatch } = useContext(AuthContext);
     const [ avatar, setAvatar ] = useState({})
+    const [ isLoading, setIsLoading ] = useState(false)
     useEffect(() => {
+       setIsLoading(true)
        axios.get(`https://api.github.com/users/${state.user.login}/repos`) 
        .then(res => {
            console.log("state: ",res);
+           setIsLoading(false)
            let repos = []
            repos = res.data.map(repo => {
                return {
@@ -20,9 +23,9 @@ function Github() {
            })
            setRepos(repos)
            setAvatar({...avatar,
-            image: res.data[0].owner.avatar_url,
-            url: res.data[0].owner.html_url,
-            userName: res.data[0].owner.login
+            image: state.user.avatar_url,
+            url: state.user.html_url,
+            userName: state.user.login,
         })
        })
        .catch(err => {
@@ -36,6 +39,11 @@ function Github() {
 
     return (
         <div className = {styles.container}>
+            {isLoading ? 
+            <div className = {styles.loaderContainer}>
+                <div className = {styles.loader}></div>
+            </div>
+            :
             <div className = {styles.main}>
                 <div className = {styles.avatarDetails}>
                     <div className = {styles.avatar}>
@@ -60,6 +68,8 @@ function Github() {
                     })}
                 </ul>
             </div>
+            }
+            
         </div>
     )
 }

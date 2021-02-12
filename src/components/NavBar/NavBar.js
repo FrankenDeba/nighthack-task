@@ -24,20 +24,20 @@ function NavBar() {
                     <div className = {styles.menu} onClick = {()=>setISOpen(true)}>
                         <img src = {navbarLogo} alt = "O"></img>
                     </div>
-        }
+                }
 
+            </div>
+            <div className = {styles.desktop}>
+                <li className={styles.link}>Services</li>
+                <li className={styles.link}>Product</li>
+                <li className={styles.link}>Technology</li>
+                <li className={styles.link}>About</li>
+                <li className={styles.link}>Client</li>
+                <Link to = "/login" className = {styles.link}>Log In</Link>
+            </div>
+            
         </div>
-        <div className = {styles.desktop}>
-            <li className={styles.link}>Services</li>
-            <li className={styles.link}>Product</li>
-            <li className={styles.link}>Technology</li>
-            <li className={styles.link}>About</li>
-            <li className={styles.link}>Client</li>
-            <Link to = "/login" className = {styles.link}>Log In</Link>
-        </div>
-        
-    </div>
-    )
+        )
 }
 
 export default NavBar
