@@ -1,3 +1,8 @@
+#To run this app
+
+Clone the repo,then npm i, then run npm start and browese ./server folder, run command node index.js.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
