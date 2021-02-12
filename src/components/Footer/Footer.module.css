@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.logoImage{
+    width: 30px;
+    height: 30px;
+}
+.logoHolder{
+    display: flex;
+    width: 8rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.brandName{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 0.25rem;
+}
+.brandFullName{
+    color: #263238;
+    font-weight: 500;
+    font-size: 18px;
+}
+.address{
+    text-align: left;
+}
+.contact{
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+.addressDetails{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 27px;
+}
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+        margin-left: 3rem;
+    }
+    .addressDetails{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}

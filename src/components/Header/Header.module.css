@@ -1,0 +1,50 @@
+.container{
+height:100%;
+box-shadow: 0 1px 1px 0px #ddd;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logoImage{
+    width: 30px;
+    height: 30px;
+}
+.extraLogos{
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+    margin-right: 12rem;
+}
+.union,.mail,.shuffle{
+    width:15px;
+    height:15px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.logoHolder{
+    display: flex;
+    width: 8rem;
+    height: 100%;
+    justify-content: space-between;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.brandName{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 0.25rem;
+}
+@media screen and (max-width: 600px){
+    .extraLogos{
+        display: none;
+    }
+    .logoHolder{
+        margin-left: 3rem;
+    }
+    .container{
+        align-items: flex-start;
+    }
+}
