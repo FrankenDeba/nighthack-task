@@ -1,4 +1,4 @@
-#To run this app
+# To run this app
 
 Clone the repo,then npm i, then run npm start and browese ./server folder, run command node index.js.
 
