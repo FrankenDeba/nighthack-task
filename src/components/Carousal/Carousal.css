@@ -1,0 +1,12 @@
+.arrow{
+    font-size: 5rem;
+    font-weight: bold;
+    color: darkgray;
+    padding: 2rem;
+    background-color: whitesmoke;
+}
+
+.carousal_holder{
+    display: flex;
+    align-items: center;
+}
